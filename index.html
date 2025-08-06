@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <script>
         tailwind.config = {
@@ -63,11 +64,31 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero-bg w-full h-screen flex items-center justify-center">
-        <div class="container mx-auto px-4 text-center text-white">
-            <h1 class="text-4xl md:text-6xl font-bold font-raleway mb-4">PLAN. MANUFACTURE. DELIVER.</h1>
-            <h2 class="text-xl md:text-2xl mb-8">Precision Engineering for Critical Industries</h2>
-            <a href="#about" class="btn-get-started">Learn More</a>
+    <section id="hero" class="w-full h-screen">
+        <div class="swiper-container hero-slider h-full">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide hero-slide-1">
+                    <div class="container mx-auto px-4 text-center text-white">
+                        <h1 class="text-4xl md:text-6xl font-bold font-raleway mb-4">PLAN. MANUFACTURE. DELIVER.</h1>
+                        <h2 class="text-xl md:text-2xl mb-8">Precision Engineering for Critical Industries</h2>
+                        <a href="#about" class="btn-get-started">Learn More</a>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide hero-slide-2">
+                    <div class="container mx-auto px-4 text-center text-white">
+                        <h1 class="text-4xl md:text-6xl font-bold font-raleway mb-4">HEAVY-DUTY BOGIE</h1>
+                        <h2 class="text-xl md:text-2xl mb-8">Engineered for Freight Trains and Long Hauls</h2>
+                        <a href="#products" class="btn-get-started">Our Products</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </section>
 
@@ -77,23 +98,81 @@
             <div class="container mx-auto px-4">
                 <div class="section-title">
                     <h2>About Us</h2>
-                    <p>Forging a Legacy of Industrial Excellence Since 2021</p>
+                    <p>Engineering Confidence. Delivering Excellence.</p>
                 </div>
-                <div class="flex flex-wrap items-center">
+                <div class="flex flex-wrap items-center mb-16">
                     <div class="w-full lg:w-1/2 mb-8 lg:mb-0 lg:pr-8">
-                        <p class="italic mb-4">
-                            Sudarshan Planeta Corporation LLP is a trusted manufacturer of critical railway components, delivering precision and reliability to India's most strategic sectors.
+                        <p class="mb-4 text-gray-600">
+                            Welcome to Sudarshan Planeta Corporation LLP, a trusted name in the precision manufacturing of critical components for India’s Railways, Defense, and Naval sectors. Since our inception in 2021, we have remained steadfast in our commitment to quality, integrity, and innovation—delivering not just components, but confidence.
                         </p>
-                        <ul class="list-none p-0">
-                            <li class="flex items-start mb-2"><i class="fas fa-check-circle text-brand-orange mt-1 mr-2"></i><div><strong>Unwavering Commitment to Quality:</strong> Our legacy is built on a foundation of technical precision and process excellence.</div></li>
-                            <li class="flex items-start mb-2"><i class="fas fa-check-circle text-brand-orange mt-1 mr-2"></i><div><strong>Advanced Manufacturing:</strong> We combine modern techniques with a strong ethical framework to deliver robust components.</div></li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-brand-orange mt-1 mr-2"></i><div><strong>Strategic Partner:</strong> Our products are vital to the safety and efficiency of the Railway, Defense, and Naval sectors.</div></li>
-                        </ul>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Who We Are</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            At Sudarshan Planeta, we specialize in high-precision casting and machining of vital railway components such as Side Frames and Bolsters for Bogies. With a clear focus on engineering excellence, we serve as a reliable partner to some of the country’s most strategic and demanding industries. Backed by a team of seasoned professionals and powered by advanced technology, our work is defined by process discipline, technical accuracy, and an unrelenting drive for perfection.
+                        </p>
                     </div>
                     <div class="w-full lg:w-1/2">
                          <img src="images/factory.jpg" alt="Our Factory" class="rounded-lg shadow-lg w-full">
                     </div>
                 </div>
+
+                <div class="flex flex-wrap items-center mb-16">
+                    <div class="w-full lg:w-1/2 order-2 lg:order-1">
+                        <img src="images/about-2.jpg" alt="Team Expertise" class="rounded-lg shadow-lg w-full">
+                   </div>
+                    <div class="w-full lg:w-1/2 mb-8 lg:mb-0 lg:pl-8 order-1 lg:order-2">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Our Legacy and Expertise</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Though formally established in 2021, our team brings years of collective expertise in metal casting and manufacturing. From raw material selection to final inspection, we follow a meticulous process that ensures every product is built to perform and built to last.
+                        </p>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Commitment to Quality</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                           Quality is at the core of everything we do. Each component undergoes rigorous testing and inspection to meet our uncompromising standards. We believe that true quality lies not only in the product—but also in the processes, people, and promises behind it.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold mb-4 text-center text-gray-900">Our Capabilities</h3>
+                    <ul class="list-none p-0 max-w-3xl mx-auto">
+                        <li class="flex items-start mb-3"><i class="fas fa-check-circle text-brand-orange mt-1 mr-3"></i><div><strong>Advanced Manufacturing Techniques:</strong> Incorporating modern methods to ensure efficiency and accuracy.</div></li>
+                        <li class="flex items-start mb-3"><i class="fas fa-check-circle text-brand-orange mt-1 mr-3"></i><div><strong>Versatile Materials Expertise:</strong> Working with iron and other high-grade metals to suit varied industrial requirements.</div></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand-orange mt-1 mr-3"></i><div><strong>Collaborative Process:</strong> Partnering closely with clients from concept to completion for tailored solutions.</div></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap -mx-4 mb-16">
+                    <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Our Vision</h3>
+                        <p class="text-gray-600 leading-relaxed">To become a respected and dominant player across the Railways, Defense, and Naval industries by delivering precision-engineered products, fostering manufacturing excellence, and upholding the highest standards of ethical business practices.</p>
+                    </div>
+                    <div class="w-full lg:w-1/2 px-4">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Our Mission</h3>
+                        <p class="text-gray-600 leading-relaxed">To consistently deliver defect-free, high-performance components through cutting-edge manufacturing, timely execution, and a culture of continuous improvement and innovation.</p>
+                    </div>
+                </div>
+
+                <div class="section-title">
+                    <h2>Core Values That Drive Us</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="value-box">
+                        <h4 class="title">Quality</h4>
+                        <p class="description">We commit to the highest performance standards in every product we deliver.</p>
+                    </div>
+                    <div class="value-box">
+                        <h4 class="title">Innovation</h4>
+                        <p class="description">We embrace new technologies and creative thinking to stay ahead.</p>
+                    </div>
+                    <div class="value-box">
+                        <h4 class="title">Customer Focus</h4>
+                        <p class="description">We listen, adapt, and respond with the client’s success as our ultimate goal.</p>
+                    </div>
+                    <div class="value-box">
+                        <h4 class="title">Accountability</h4>
+                        <p class="description">We take ownership—of our work, our decisions, and our commitments.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -101,17 +180,54 @@
         <section id="products" class="py-20 bg-gray-50">
             <div class="container mx-auto px-4">
                 <div class="section-title">
-                    <h2>Our Core Product</h2>
-                    <p>Bogie Systems: The Foundation of Safe and Efficient Rail Transport</p>
+                    <h2>Our Product :  Train Bogie</h2>
+                    <p>Engineered for Heavy Loads. Built for Long Hauls.</p>
                 </div>
-                <div class="flex flex-wrap items-center">
-                    <div class="w-full lg:w-1/2 order-2 lg:order-1 lg:pr-8">
-                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Engineered for Reliability and Performance</h3>
-                        <p class="text-gray-600 leading-relaxed mb-4">The bogie is the critical assembly that supports the railcar body, ensures stability, and provides ride comfort. We specialize in manufacturing high-performance bogie systems engineered to withstand immense operational stresses.</p>
-                        <p class="text-gray-600 leading-relaxed">From the high-tensile cast steel frame to the precision-machined components of the suspension system, every element is manufactured to meet and exceed the stringent standards set by the Indian Railways (RDSO) and other global benchmarks.</p>
+                <div class="text-center max-w-4xl mx-auto mb-12">
+                    <p class="text-gray-600 leading-relaxed">
+                        At Sudarshan Planeta Corporation LLP (SPCL), we specialize in the design and manufacturing of bogie exclusively for freight trains. Our Side Frames and Bolsters are engineered to deliver maximum structural integrity, load-bearing performance, and long-term durability—making them ideal for the demanding conditions of heavy-duty goods transport. We combine high-tech manufacturing with proven engineering to deliver bogies that contribute to freight safety, derailment protection, operational stability, and minimum wear and tear on rail infrastructure.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap items-stretch -mx-4">
+                    <!-- Left Column with details -->
+                    <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
+                        <div class="bg-white rounded-lg shadow-lg p-8 h-full">
+                            <div class="mb-6">
+                                <h3 class="text-xl font-bold text-brand-blue mb-3 flex items-center"><i class="fas fa-cogs text-brand-orange mr-3"></i> Integrated Bogie Structure</h3>
+                                <p class="text-gray-600">Our freight bogies are made up of two key components: <strong>Side Frames</strong> that form the outer frame and the <strong>Bolster</strong> which carries the vertical load. Together, they form a robust and reliable bogie system capable of hauling large cargo loads across long distances.</p>
+                            </div>
+                            <div class="mb-6">
+                                <h3 class="text-xl font-bold text-brand-blue mb-3 flex items-center"><i class="fas fa-star text-brand-orange mr-3"></i> Key Features</h3>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                    <li>High tensile strength for dynamic loads and shocks</li>
+                                    <li>Precision machining for perfect alignment</li>
+                                    <li>Corrosion-resistant finishes for durability</li>
+                                    <li>Compliant with RDSO specifications</li>
+                                    <li>Longer service life with reduced wear</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-blue mb-3 flex items-center"><i class="fas fa-truck-moving text-brand-orange mr-3"></i> Applications</h3>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                    <li>Bulk commodity transport (coal, cement, ore, etc.)</li>
+                                    <li>Heavy industrial goods & Containerized cargo</li>
+                                    <li>Specialized defense and infrastructure freight</li>
+                                    <li>Motor bogies for extremely heavy loads</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="w-full lg:w-1/2 order-1 lg:order-2 mb-8 lg:mb-0">
-                        <img src="images/product-bogie.jpg" alt="Bogie System" class="rounded-lg shadow-lg w-full">
+                    <!-- Right Column with two images -->
+                    <div class="w-full lg:w-1/2 px-4">
+                        <div class="grid grid-cols-1 gap-8 h-full">
+                            <div class="bg-white rounded-lg shadow-lg p-4">
+                                <img src="images/product-bogie.jpg" alt="Freight Bogie Assembly 1" class="rounded-lg w-full">
+                            </div>
+                            <div class="bg-white rounded-lg shadow-lg p-4">
+                                <img src="images/product-side-frame.jpg" alt="Freight Bogie Assembly 2" class="rounded-lg w-full">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,7 +248,7 @@
                     </div>
                     <div class="process-box">
                         <div class="icon"><i class="fas fa-industry"></i></div>
-                        <h4 class="title">Casting & Forging</h4>
+                        <h4 class="title">Quality Casting</h4>
                         <p class="description">Utilizing state-of-the-art foundry techniques to create robust and durable raw components.</p>
                     </div>
                     <div class="process-box">
@@ -163,12 +279,12 @@
                     <a href="images/gallery-4.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-4.jpg" alt="Gallery Image 4"></a>
                     <a href="images/gallery-5.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-5.jpg" alt="Gallery Image 5"></a>
                     <a href="images/gallery-6.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-6.jpg" alt="Gallery Image 6"></a>
-					<a href="images/gallery-7.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-7.jpg" alt="Gallery Image 7"></a>
-					<a href="images/gallery-8.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-8.jpg" alt="Gallery Image 8"></a>
-					<a href="images/gallery-9.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-9.jpg" alt="Gallery Image 9"></a>
-					<a href="images/gallery-10.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-10.jpg" alt="Gallery Image 10"></a>
-					<a href="images/gallery-11.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-11.jpg" alt="Gallery Image 11"></a>
-					<a href="images/gallery-12.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-12.jpg" alt="Gallery Image 12"></a>
+                    <a href="images/gallery-7.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-7.jpg" alt="Gallery Image 7"></a>
+                    <a href="images/gallery-8.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-8.jpg" alt="Gallery Image 8"></a>
+                    <a href="images/gallery-9.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-9.jpg" alt="Gallery Image 9"></a>
+                    <a href="images/gallery-10.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-10.jpg" alt="Gallery Image 10"></a>
+                    <a href="images/gallery-11.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-11.jpg" alt="Gallery Image 11"></a>
+                    <a href="images/gallery-12.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-12.jpg" alt="Gallery Image 12"></a>
                 </div>
             </div>
         </section>
@@ -192,7 +308,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-lg">Address:</h4>
-                                    <p class="text-gray-600">Block 2&3, Revenue Sy no 248/253/2, At Khambhala, <br> Ta - Padadhari, Rajkot - 360110, Gujarat, INDIA.</p>
+                                    <p class="text-gray-600">Block 2&3, Revenue Sy no 248/253/2, At Khambhala,<br>Ta-Padadhari, Rajkot - 360110, Gujarat, INDIA.</p>
                                 </div>
                             </div>
                             <div class="flex items-center mb-6">
@@ -255,7 +371,7 @@
             <div class="flex flex-wrap justify-between">
                 <div class="w-full lg:w-1/3 mb-8 lg:mb-0">
                     <h3 class="text-2xl font-bold mb-4">Sudarshan Planeta Corporation LLP</h3>
-                    <p class="text-gray-400"><strong>Address:</strong>Block 2&3, Revenue Sy no 248/253/2,<br>At Khambhala, Ta - Padadhari, Rajkot - 360110, Gujarat, INDIA.<br>
+                    <p class="text-gray-400"><strong>Address:</strong>Block 2&3, Revenue Sy no 248/253/2, At Khambhala,<br>Ta-Padadhari, Rajkot - 360110, Gujarat, INDIA.<br><br>
                     <strong>Phone:</strong> +91 77 990 222 74<br>
                     <strong>Email:</strong> Bhavesh@sudarshanplaneta.com<br>
                     </p>
@@ -293,6 +409,7 @@
         <a class="lightbox-next">&#10095;</a>
     </div>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -371,9 +488,25 @@
             }
         });
 
+        // Swiper Hero Slider
+        document.addEventListener('DOMContentLoaded', function () {
+            var swiper = new Swiper('.hero-slider', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+            });
+        });
+
     </script>
 </body>
 </html>
-
-
-
