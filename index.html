@@ -277,7 +277,7 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="certificate-box">
-                        <h4 class="text-xl font-bold text-brand-orange mb-3 flex text-center">NABL Certificate TC-16720</h4>
+                        <h4 class="text-xl font-bold text-brand-orange mb-3 flex text-align-center">NABL Certificate TC-16720</h4>
                         <a href="images/certificates/NABL Certificate TC-16720.png" class="gallery-item">
                             <img src="images/certificates/NABL Certificate TC-16720.png" alt="NABL Certificate" class="certificate-image">
                         </a>
@@ -410,25 +410,23 @@
                     </div>
                     <!-- Form -->
                     <div class="w-full lg:w-1/2 px-4">
-                        <div class="bg-brand-blue-dark rounded-lg shadow-lg p-8 h-full">
-                             <h3 class="text-2xl font-bold mb-6 text-white">Send Us a Message</h3>
-                            <form>
-                                <div class="mb-4">
-                                    <input type="text" placeholder="Your Name" class="form-input-light">
-                                </div>
-                                <div class="mb-4">
-                                    <input type="email" placeholder="Your Email" class="form-input-light">
-                                </div>
-                                <div class="mb-4">
-                                    <input type="text" placeholder="Subject" class="form-input-dark">
-                                </div>
-                                <div class="mb-4">
-                                    <textarea rows="5" placeholder="Message" class="form-input-dark"></textarea>
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" class="btn-get-started">Send Message</button>
-                                </div>
-                            </form>
+                        <div class="rounded-lg shadow-lg p-8 h-full">
+                             <h3 class="text-2xl font-bold mb-6 text-brand-blue">Send Us a Message</h3>
+						<form>
+                        <div class="mb-2">
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full bg-gray-100 border border-gray-100 rounded-lg py-2 px-2 focus:outline-none focus:ring-2 focus:ring-sudarshan-orange transition-colors">
+                        </div>
+                        <div class="mb-2">
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full bg-gray-100 border border-gray-100 rounded-lg py-2 px-2 focus:outline-none focus:ring-2 focus:ring-sudarshan-orange transition-colors">
+                        </div>
+                        <div class="mb-2">
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="2" class="w-full bg-gray-100 border border-gray-100 rounded-lg py-2 px-2 focus:outline-none focus:ring-2 focus:ring-sudarshan-orange transition-colors"></textarea>
+                        </div>
+                        <button type="submit" class="btn-get-started">Send Message</button>
+						</form>
                         </div>
                     </div>
                 </div>
@@ -591,6 +589,7 @@
     </script>
 </body>
 </html>
+
 
 
 
