@@ -229,7 +229,7 @@ html {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #a9a9a9;
     align-items: center;
     justify-content: center;
 }
@@ -237,7 +237,7 @@ html {
 .lightbox-content {
     margin: auto;
     display: block;
-    max-width: 80%;
+    max-width: 200%;
     max-height: 80vh;
 }
 
@@ -289,3 +289,4 @@ html {
 .lightbox-next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
