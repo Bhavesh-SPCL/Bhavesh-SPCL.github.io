@@ -2,50 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-/* General Body Styles */
-body {
-    font-family: 'Aptos', 'Open Sans', sans-serif;
-    color: #444444;
-}
-
+/* Base Variable Fallbacks */
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
-a {
-    color: #f58220; /* brand-orange */
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-a:hover {
-    color: #d97706; /* brand-orange-dark */
-}
-
-/* Scroll Padding for Fixed Header */
-html {
-    scroll-padding-top: 90px;
-}
-
-/* Header */
+/* Header Resizing Engine */
 #header {
-    height: 100px;
+    height: 96px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-b: 1px solid rgba(243, 244, 246, 1);
 }
 #header.header-scrolled {
-    height: 90px;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    height: 76px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 
 .nav-link {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: 17px;
-    white-space: nowrap;
-    transition: 0.3s;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     position: relative;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
+    transition: color 0.2s ease-in-out;
 }
-
 .nav-link:before {
     content: "";
     position: absolute;
@@ -53,55 +38,50 @@ html {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #f58220; /* brand-orange */
+    background-color: #f58220;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out 0s;
 }
-
-.nav-link:hover:before, .nav-link.active:before {
+.nav-link:hover:before {
     visibility: visible;
     transform: scaleX(1);
 }
 
 .btn-get-started {
     font-family: "Raleway", sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    letter-spacing: 2px;
-    display: inline-block;
-    padding: 10px 30px;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 26px;
     border-radius: 50px;
-    transition: 0.5s;
-    color: #444444; /* brand-blue */
-    background: #f58220; /* brand-orange */
+    background-color: #f58220;
+    color: #ffffff !important;
+    box-shadow: 0 4px 6px -1px rgba(245, 130, 32, 0.2);
+    transition: all 0.2s ease-in-out;
 }
-
 .btn-get-started:hover {
-    background: #d97706; /* brand-orange-dark */
-    color: white;
+    background-color: #d97706;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 8px -1px rgba(217, 119, 6, 0.3);
 }
 
-/* Hero Section */
+/* Modernized Hero Overlay System */
 .swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    color: white;
     background-size: cover;
     background-position: center;
     position: relative;
 }
 .swiper-slide::before {
     content: "";
-    background: rgba(0, 0, 0, 0.5);
     position: absolute;
     inset: 0;
-}
-.swiper-slide > * {
-    position: relative;
-    z-index: 10;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.6));
+    z-index: 1;
 }
 .hero-slide-1 {
     background-image: url('../images/hero-background.jpeg');
@@ -109,184 +89,149 @@ html {
 .hero-slide-2 {
     background-image: url('../images/hero-background-2.jpeg');
 }
-#hero h1, #hero h2 {
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-.swiper-pagination-bullet-active {
-    background-color: #f58220 !important;
-}
-.swiper-button-next, .swiper-button-prev {
-    color: #f58220 !important;
-}
 
-
-/* Section Title */
+/* Structural Components Section Headers */
 .section-title {
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 .section-title h2 {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
     position: relative;
     font-family: "Raleway", sans-serif;
-    color: #444444; /* brand-blue */
+    color: #111111;
+    padding-bottom: 14px;
 }
 .section-title h2::after {
     content: '';
     position: absolute;
     display: block;
-    width: 60px;
+    width: 50px;
     height: 3px;
-    background: #f58220; /* brand-orange */
+    background: #f58220;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 }
 .section-title p {
-    margin-bottom: 0;
-    color: #777777;
+    color: #6b7280;
+    font-size: 16px;
 }
 
-/* Process Section */
+/* Workflow Presentation Elements */
 .process-box {
     text-align: center;
-    padding: 30px 20px;
-    transition: all ease-in-out 0.3s;
-    background: #fff;
-    box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.1);
-    border-radius: 8px;
+    padding: 32px 24px;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border-radius: 12px;
+    border: 1px solid #f3f4f6;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .process-box .icon {
-    margin: 0 auto;
-    width: 64px;
-    height: 64px;
-    background: #f58220; /* brand-orange */
-    border-radius: 50px;
+    margin: 0 auto 20px auto;
+    width: 60px;
+    height: 60px;
+    background: #f58220;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
-    transition: 0.3s;
-    color: #fff;
-    font-size: 28px;
+    color: #ffffff;
+    font-size: 24px;
+    transition: all 0.3s ease;
 }
 .process-box .title {
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-size: 18px;
-    color: #444444; /* brand-blue */
+    color: #111111;
 }
 .process-box .description {
-    line-height: 24px;
+    line-height: 1.5;
     font-size: 14px;
+    color: #4b5563;
 }
 .process-box:hover {
-    transform: translateY(-10px);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+    border-color: rgba(245, 130, 32, 0.2);
 }
 
-/* Value Box for About Section */
+/* Value Components Presentation Box */
 .value-box {
     text-align: center;
-    padding: 20px;
-    background: #f9f9f9;
+    padding: 24px 20px;
+    background: #f9fafb;
     border-radius: 8px;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f3f4f6;
+    transition: transform 0.2s ease;
+}
+.value-box:hover {
+    transform: translateY(-2px);
 }
 .value-box .title {
     font-weight: 700;
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #444444;
+    margin-bottom: 8px;
+    font-size: 17px;
+    color: #f58220;
 }
 .value-box .description {
     font-size: 14px;
-    color: #777777;
+    color: #4b5563;
+    line-height: 1.4;
 }
 
-
-/* Form Input Styling */
-.form-input {
-    @apply w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-brand-orange transition-colors;
-}
-
-.form-input-dark {
-    @apply w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors;
-}
-
-
-/* Lightbox Styles */
+/* Lightbox Base Infrastructure overlay */
 .lightbox {
     display: none;
     position: fixed;
-    z-index: 1000;
-    padding-top: 60px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: #a9a9a9;
+    z-index: 2000;
+    inset: 0;
+    background-color: rgba(17, 17, 17, 0.9);
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(4px);
 }
-
 .lightbox-content {
-    margin: auto;
-    display: block;
-    max-width: 200%;
-    max-height: 80vh;
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
-
 .lightbox-close {
     position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
+    top: 20px;
+    right: 25px;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 300;
     cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
 }
-
-.lightbox-close:hover,
-.lightbox-close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+.lightbox-close:hover {
+    color: #f58220;
 }
-
-.lightbox-prev,
-.lightbox-next {
+.lightbox-prev, .lightbox-next {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
+    transform: translateY(-50%);
+    padding: 20px;
+    color: #ffffff;
     font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    font-size: 24px;
     user-select: none;
-    -webkit-user-select: none;
+    transition: color 0.2s;
 }
-
-.lightbox-next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+.lightbox-next { right: 10px; }
+.lightbox-prev { left: 10px; }
+.lightbox-prev:hover, .lightbox-next:hover {
+    color: #f58220;
 }
-
-.lightbox-prev {
-    left: 0;
-}
-
-.lightbox-prev:hover,
-.lightbox-next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
