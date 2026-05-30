@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sudarshan Planeta Corporation LLP</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        'aptos': ['Aptos', 'sans-serif'],
+                        'sans': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
                         'raleway': ['Raleway', 'sans-serif'],
                     },
                     colors: {
@@ -30,101 +36,106 @@
         }
     </script>
 </head>
-<body class="font-aptos text-gray-700">
+<body class="bg-white text-gray-700 antialiased">
 
-    <!-- Header -->
-    <header id="header" class="bg-white fixed w-full z-50 transition-all duration-300">
-        <div class="container mx-auto px-4 flex justify-between items-center py-4">
+    <!-- Header / Navigation -->
+    <header id="header" class="bg-white fixed w-full z-50 transition-all duration-300 flex items-center">
+        <div class="container mx-auto px-4 flex justify-between items-center w-full">
             <div class="logo">
-                <a href="index.html"><img src="images/logo.png" alt="Sudarshan Planeta Logo" class="h-16"></a>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Sudarshan Planeta Logo" class="h-16 transition-all duration-300">
+                </a>
             </div>
             <nav class="hidden lg:flex items-center space-x-8">
-                <a href="#hero" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#products" class="nav-link">Products</a>
-                <a href="#process" class="nav-link">Process</a>
-                <a href="#certifications" class="nav-link">Certifications</a>
-                <a href="#gallery" class="nav-link">Gallery</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#hero" class="nav-link text-gray-800 hover:text-brand-orange">Home</a>
+                <a href="#about" class="nav-link text-gray-800 hover:text-brand-orange">About</a>
+                <a href="#products" class="nav-link text-gray-800 hover:text-brand-orange">Products</a>
+                <a href="#process" class="nav-link text-gray-800 hover:text-brand-orange">Process</a>
+                <a href="#certifications" class="nav-link text-gray-800 hover:text-brand-orange">Certifications</a>
+                <a href="#gallery" class="nav-link text-gray-800 hover:text-brand-orange">Gallery</a>
+                <a href="#contact" class="nav-link text-gray-800 hover:text-brand-orange">Contact</a>
             </nav>
             <a href="#contact" class="btn-get-started hidden lg:inline-block">Get a Quote</a>
-            <button id="mobile-menu-button" class="lg:hidden text-2xl text-brand-blue">
+            <button id="mobile-menu-button" class="lg:hidden text-2xl text-brand-blue focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white py-2">
-            <a href="#hero" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Home</a>
-            <a href="#about" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">About</a>
-            <a href="#products" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Products</a>
-            <a href="#process" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Process</a>
-            <a href="#certifications" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Certifications</a>
-            <a href="#gallery" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Gallery</a>
-            <a href="#contact" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
-            <a href="#contact" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Get a Quote</a>
-        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="w-full h-screen">
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden fixed w-full bg-white z-40 top-[100px] border-b border-gray-100 shadow-md transition-all">
+        <div class="px-4 pt-2 pb-4 space-y-1">
+            <a href="#hero" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded">Home</a>
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded">About</a>
+            <a href="#products" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded">Products</a>
+            <a href="#process" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded">Process</a>
+            <a href="#certifications" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded">Certifications</a>
+            <a href="#gallery" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded">Gallery</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded">Contact</a>
+            <a href="#contact" class="block mx-4 my-2 text-center btn-get-started">Get a Quote</a>
+        </div>
+    </div>
+
+    <!-- Hero Section Carousel -->
+    <section id="hero" class="w-full h-screen relative">
         <div class="swiper-container hero-slider h-full">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide hero-slide-1">
-                    <div class="container mx-auto px-4 text-center text-white">
-                        <h1 class="text-4xl md:text-6xl font-bold font-raleway mb-4">Precision in Motion, Excellence in Engineering</h1>
-                        <h2 class="text-xl md:text-2xl mb-8">Expert foundry services for diverse industries</h2>
-                        <a href="#about" class="btn-get-started">Learn More</a>
+                    <div class="container mx-auto px-4 text-center text-white relative z-10">
+                        <h1 class="text-4xl md:text-6xl font-bold font-raleway mb-4 drop-shadow-md">Precision in Motion, Excellence in Engineering</h1>
+                        <h2 class="text-xl md:text-2xl mb-8 opacity-90">Expert foundry services for diverse industries</h2>
+                        <a href="#about" class="btn-get-started text-white">Learn More</a>
                     </div>
                 </div>
                 <!-- Slide 2 -->
                 <div class="swiper-slide hero-slide-2">
-                    <div class="container mx-auto px-4 text-center text-white">
-                        <h1 class="text-4xl md:text-6xl font-bold font-raleway mb-4">HEAVY-DUTY BOGIE</h1>
-                        <h2 class="text-xl md:text-2xl mb-8">Engineered for Freight Trains and Long Hauls</h2>
-                        <a href="#products" class="btn-get-started">Our Products</a>
+                    <div class="container mx-auto px-4 text-center text-white relative z-10">
+                        <h1 class="text-4xl md:text-6xl font-bold font-raleway mb-4 drop-shadow-md">HEAVY-DUTY BOGIE</h1>
+                        <h2 class="text-xl md:text-2xl mb-8 opacity-90">Engineered for Freight Trains and Long Hauls</h2>
+                        <a href="#products" class="btn-get-started text-white">Our Products</a>
                     </div>
                 </div>
             </div>
-            <!-- Add Pagination -->
+            <!-- Pagination & Navigation Controls -->
             <div class="swiper-pagination"></div>
-            <!-- Add Navigation -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next hidden md:flex"></div>
+            <div class="swiper-button-prev hidden md:flex"></div>
         </div>
     </section>
 
     <main>
         <!-- About Us Section -->
-        <section id="about" class="py-20">
+        <section id="about" class="py-20 bg-white">
             <div class="container mx-auto px-4">
                 <div class="section-title">
                     <h2>About Us</h2>
                     <p>Engineering Confidence. Delivering Excellence.</p>
                 </div>
-                <div class="flex flex-wrap items-center mb-16">
-                    <div class="w-full lg:w-1/2 mb-8 lg:mb-0 lg:pr-8">
-                            <h3 class="text-2xl font-bold mb-4 text-gray-900">Welcome to</h3> 
-                        <p class="mb-4 text-gray-600">
-                            Sudarshan Planeta Corporation LLP, a trusted name in the precision manufacturing of critical components for Railways, Defense, Auto-mobiles sectors and Engineering parts. Since our inception in 2021, we have remained steadfast in our commitment to quality, integrity, and innovation—delivering not just components, but confidence.
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Welcome to Sudarshan Planeta</h3>
+                        <p class="mb-6 text-gray-600 leading-relaxed">
+                            Sudarshan Planeta Corporation LLP, a trusted name in the precision manufacturing of critical components for Railways, Defense, Automobiles sectors and Engineering parts. Since our inception in 2021, we have remained steadfast in our commitment to quality, integrity, and innovation—delivering not just components, but confidence.
                         </p>
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">Who We Are</h3>
                         <p class="text-gray-600 leading-relaxed">
                             At Sudarshan Planeta, we specialize in high-precision casting and machining of vital railway components such as Side Frames and Bolsters for Bogies. With a clear focus on engineering excellence, we serve as a reliable partner to some of the country’s most strategic and demanding industries. Backed by a team of seasoned professionals and powered by advanced technology, our work is defined by process discipline, technical accuracy, and an unrelenting drive for perfection.
                         </p>
                     </div>
-                    <div class="w-full lg:w-1/2">
-                         <img src="images/factory.jpg" alt="Our Factory" class="rounded-lg shadow-lg w-full">
+                    <div>
+                        <img src="images/factory.jpg" alt="Our Factory" class="rounded-lg shadow-lg w-full object-cover h-[400px]">
                     </div>
                 </div>
 
-                <div class="flex flex-wrap items-center mb-16">
-                    <div class="w-full lg:w-1/2 order-2 lg:order-1">
-                        <img src="images/about-2.jpg" alt="Team Expertise" class="rounded-lg shadow-lg w-full">
-                   </div>
-                    <div class="w-full lg:w-1/2 mb-8 lg:mb-0 lg:pl-8 order-1 lg:order-2">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="order-2 lg:order-1">
+                        <img src="images/about-2.jpg" alt="Team Expertise" class="rounded-lg shadow-lg w-full object-cover h-[400px]">
+                    </div>
+                    <div class="order-1 lg:order-2">
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">Our Legacy and Expertise</h3>
-                        <p class="text-gray-600 leading-relaxed mb-4">
+                        <p class="text-gray-600 leading-relaxed mb-6">
                             Though formally established in 2021, our team brings years of collective expertise in metal casting and manufacturing. From raw material selection to final inspection, we follow a meticulous process that ensures every product is built to perform and built to last.
                         </p>
                         <h3 class="text-2xl font-bold mb-4 text-gray-900">Commitment to Quality</h3>
@@ -134,22 +145,39 @@
                     </div>
                 </div>
 
-                <div class="mb-16">
-                    <h3 class="text-2xl font-bold mb-4 text-center text-gray-900">Our Capabilities</h3>
-                    <ul class="list-none p-0 max-w-3xl mx-auto">
-                        <li class="flex items-start mb-3"><i class="fas fa-check-circle text-brand-orange mt-1 mr-3"></i><div><strong>Advanced Manufacturing Techniques:</strong> Incorporating modern methods to ensure efficiency and accuracy.</div></li>
-                        <li class="flex items-start mb-3"><i class="fas fa-check-circle text-brand-orange mt-1 mr-3"></i><div><strong>Versatile Materials Expertise:</strong> Working with iron and other high-grade metals to suit varied industrial requirements.</div></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-brand-orange mt-1 mr-3"></i><div><strong>Collaborative Process:</strong> Partnering closely with clients from concept to completion for tailored solutions.</div></li>
+                <!-- Strategic Video Placement -->
+                <div class="my-16 max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-6 text-center text-gray-900">Facility Overview & Production Video</h3>
+                    <div class="aspect-video rounded-lg overflow-hidden shadow-xl border border-gray-100">
+                        <iframe src="https://www.youtube.com/embed/A1IT1dYZVsY" class="w-full h-full" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <div class="mb-16 bg-gray-50 p-8 rounded-xl border border-gray-100 max-w-3xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-6 text-center text-gray-900">Our Capabilities</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-brand-orange mt-1 mr-3 text-lg"></i>
+                            <div><strong>Advanced Manufacturing Techniques:</strong> Incorporating modern methods to ensure efficiency and accuracy.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-brand-orange mt-1 mr-3 text-lg"></i>
+                            <div><strong>Versatile Materials Expertise:</strong> Working with iron and other high-grade metals to suit varied industrial requirements.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-brand-orange mt-1 mr-3 text-lg"></i>
+                            <div><strong>Collaborative Process:</strong> Partnering closely with clients from concept to completion for tailored solutions.</div>
+                        </li>
                     </ul>
                 </div>
 
-                <div class="flex flex-wrap -mx-4 mb-16">
-                    <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
-                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Our Vision</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    <div class="bg-white p-6 border-l-4 border-brand-orange shadow-sm rounded-r-lg">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Our Vision</h3>
                         <p class="text-gray-600 leading-relaxed">To become a respected and dominant player across the Railways, Defense, Automobile and Engineering industries by delivering precision-engineered products, fostering manufacturing excellence, and upholding the highest standards of ethical business practices.</p>
                     </div>
-                    <div class="w-full lg:w-1/2 px-4">
-                        <h3 class="text-2xl font-bold mb-4 text-gray-900">Our Mission</h3>
+                    <div class="bg-white p-6 border-l-4 border-brand-blue shadow-sm rounded-r-lg">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Our Mission</h3>
                         <p class="text-gray-600 leading-relaxed">To consistently deliver defect-free, high-performance components through cutting-edge manufacturing, timely execution, and a culture of continuous improvement and innovation.</p>
                     </div>
                 </div>
@@ -157,7 +185,7 @@
                 <div class="section-title">
                     <h2>Core Values That Drive Us</h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="value-box">
                         <h4 class="title">Quality</h4>
                         <p class="description">We commit to the highest performance standards in every product we deliver.</p>
@@ -175,7 +203,6 @@
                         <p class="description">We take ownership—of our work, our decisions, and our commitments.</p>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -183,26 +210,25 @@
         <section id="products" class="py-20 bg-gray-50">
             <div class="container mx-auto px-4">
                 <div class="section-title">
-                    <h2>Our Product :  Railway Bogie</h2>
+                    <h2>Our Product: Railway Bogie</h2>
                     <p>Engineered for Heavy Loads. Built for Long Hauls.</p>
                 </div>
                 <div class="text-center max-w-4xl mx-auto mb-12">
                     <p class="text-gray-600 leading-relaxed">
-                        At Sudarshan Planeta Corporation LLP (SPCL), we specialize in the design and manufacturing of bogie exclusively for freight trains. Our Side Frames and Bolsters are engineered to deliver maximum structural integrity, load-bearing performance, and long-term durability—making them ideal for the demanding conditions of heavy-duty goods transport. We combine high-tech manufacturing with proven engineering to deliver bogies that contribute to freight safety, derailment protection, operational stability, and minimum wear and tear on rail infrastructure.
+                        At Sudarshan Planeta Corporation LLP (SPCL), we specialize in the design and manufacturing of bogies exclusively for freight trains. Our Side Frames and Bolsters are engineered to deliver maximum structural integrity, load-bearing performance, and long-term durability—making them ideal for the demanding conditions of heavy-duty goods transport.
                     </p>
                 </div>
 
-                <div class="flex flex-wrap items-stretch -mx-4">
-                    <!-- Left Column with details -->
-                    <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
-                        <div class="bg-white rounded-lg shadow-lg p-8 h-full">
-                            <div class="mb-6">
-                                <h3 class="text-xl font-bold text-brand-blue mb-3 flex items-center"><i class="fas fa-cogs text-brand-orange mr-3"></i> Integrated Bogie Structure</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                    <div class="bg-white rounded-lg shadow-md p-8 flex flex-col justify-between">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2 flex items-center"><i class="fas fa-cogs text-brand-orange mr-3"></i> Integrated Bogie Structure</h3>
                                 <p class="text-gray-600">Our freight bogies are made up of two key components: <strong>Side Frames</strong> that form the outer frame and the <strong>Bolster</strong> which carries the vertical load. Together, they form a robust and reliable bogie system capable of hauling large cargo loads across long distances.</p>
                             </div>
-                            <div class="mb-6">
-                                <h3 class="text-xl font-bold text-brand-blue mb-3 flex items-center"><i class="fas fa-star text-brand-orange mr-3"></i> Key Features</h3>
-                                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2 flex items-center"><i class="fas fa-star text-brand-orange mr-3"></i> Key Features</h3>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2">
                                     <li>High tensile strength for dynamic loads and shocks</li>
                                     <li>Precision machining for perfect alignment</li>
                                     <li>Corrosion-resistant finishes for durability</li>
@@ -211,8 +237,8 @@
                                 </ul>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-brand-blue mb-3 flex items-center"><i class="fas fa-truck-moving text-brand-orange mr-3"></i> Applications</h3>
-                                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2 flex items-center"><i class="fas fa-truck-moving text-brand-orange mr-3"></i> Applications</h3>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2">
                                     <li>Bulk commodity transport</li>
                                     <li>Heavy industrial goods & Containerized cargo</li>
                                     <li>Specialized defense and infrastructure freight</li>
@@ -221,15 +247,12 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Right Column with two images -->
-                    <div class="w-full lg:w-1/2 px-4">
-                        <div class="grid grid-cols-1 gap-8 h-full">
-                            <div class="bg-white rounded-lg shadow-lg p-4">
-                                <img src="images/product-bogie.jpg" alt="Freight Bogie Assembly 1" class="rounded-lg w-full">
-                            </div>
-                            <div class="bg-white rounded-lg shadow-lg p-4">
-                                <img src="images/product-side-frame.jpg" alt="Freight Bogie Assembly 2" class="rounded-lg w-full">
-                            </div>
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
+                            <img src="images/product-bogie.jpg" alt="Freight Bogie Assembly 1" class="rounded-lg w-full object-cover h-[220px]">
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
+                            <img src="images/product-side-frame.jpg" alt="Freight Bogie Assembly 2" class="rounded-lg w-full object-cover h-[220px]">
                         </div>
                     </div>
                 </div>
@@ -237,13 +260,13 @@
         </section>
 
         <!-- Process Section -->
-        <section id="process" class="py-20">
+        <section id="process" class="py-20 bg-white">
             <div class="container mx-auto px-4">
                 <div class="section-title">
                     <h2>Our Process</h2>
                     <p>A Commitment to Excellence at Every Step</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="process-box">
                         <div class="icon"><i class="fas fa-drafting-compass"></i></div>
                         <h4 class="title">Design & Engineering</h4>
@@ -276,106 +299,89 @@
                     <p>Our Commitment to Quality, Validated by Industry Standards</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					<div class="certificate-box">
-                        <h4 class="text-xl font-bold text-brand-orange mb-3 flex text-align: center">ISO certificate TUV</h4>
-                        <a href="images/certificates/NABL Certificate TC-16720.png" class="gallery-item">
-                            <img src="images/certificates/ISO certificate TUV.jpg" alt="ISO TUV Certificate" class="certificate-image">
+                    <!-- Certificate 1 -->
+                    <div class="certificate-box bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
+                        <h4 class="text-xl font-bold text-brand-orange mb-3 text-center">ISO certificate TUV</h4>
+                        <a href="images/certificates/ISO certificate TUV.jpg" class="gallery-item block mb-4 overflow-hidden rounded">
+                            <img src="images/certificates/ISO certificate TUV.jpg" alt="ISO TUV Certificate" class="certificate-image w-full h-[250px] object-cover transition-transform duration-300 hover:scale-105">
                         </a>
-                        <p class="description font-bold flex items-center">Certified to ISO 9001:2015 for Quality Management Systems.</p>
+                        <p class="description text-sm text-gray-600 text-center font-semibold">Certified to ISO 9001:2015 for Quality Management Systems.</p>
                     </div>
-                    <div class="certificate-box">
-                        <h4 class="text-xl font-bold text-brand-orange mb-3 flex text-align: center">NABL Certificate TC-16720</h4>
-                        <a href="images/certificates/NABL Certificate TC-16720.png" class="gallery-item">
-                            <img src="images/certificates/NABL Certificate TC-16720.png" alt="NABL Certificate" class="certificate-image">
+                    <!-- Certificate 2 -->
+                    <div class="certificate-box bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
+                        <h4 class="text-xl font-bold text-brand-orange mb-3 text-center">NABL Certificate TC-16720</h4>
+                        <a href="images/certificates/NABL Certificate TC-16720.png" class="gallery-item block mb-4 overflow-hidden rounded">
+                            <img src="images/certificates/NABL Certificate TC-16720.png" alt="NABL Certificate" class="certificate-image w-full h-[250px] object-cover transition-transform duration-300 hover:scale-105">
                         </a>
-                        <p class="description font-bold flex items-center">Accredited for Material Testing in accordance with ISO/IEC 17025:2017.</p>
+                        <p class="description text-sm text-gray-600 text-center font-semibold">Accredited for Material Testing in accordance with ISO/IEC 17025:2017.</p>
                     </div>
-                    <div class="certificate-box">
-                        <h4 class="text-xl font-bold text-brand-orange mb-3 flex text-center">Class 'A' Foundry Certificate</h4>
-                        <a href="images/certificates/Class A Foundry Certificate.png" class="gallery-item">
-                            <img src="images/certificates/Class A Foundry Certificate.png" alt="Class A Foundry Certificate" class="certificate-image">
+                    <!-- Certificate 3 -->
+                    <div class="certificate-box bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
+                        <h4 class="text-xl font-bold text-brand-orange mb-3 text-center">Class 'A' Foundry Certificate</h4>
+                        <a href="images/certificates/Class A Foundry Certificate.png" class="gallery-item block mb-4 overflow-hidden rounded">
+                            <img src="images/certificates/Class A Foundry Certificate.png" alt="Class A Foundry Certificate" class="certificate-image w-full h-[250px] object-cover transition-transform duration-300 hover:scale-105">
                         </a>
-                        <p class="description font-bold flex items-center">Certified as a Class 'A' Foundry by RDSO as per IS: 12117:2023.</p>
+                        <p class="description text-sm text-gray-600 text-center font-semibold">Certified as a Class 'A' Foundry by RDSO as per IS: 12117:2023.</p>
                     </div>
-                    <div class="certificate-box">
-                        <h4 class="text-xl font-bold text-brand-orange mb-3 flex text-center">Casnub 22HS Bogie Approval</h4>
-                        <div class="certificate-img-group">
-                            <a href="images/certificates/Casnub 22HS Approval letter.png" class="gallery-item">
-                               <img src="images/certificates/Casnub 22HS Approval letter.png" alt="Casnub 22HS Bogie Approval Page 1" class="certificate-image">
+                    <!-- Certificate 4 -->
+                    <div class="certificate-box bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
+                        <h4 class="text-xl font-bold text-brand-orange mb-3 text-center">Casnub 22HS Bogie Approval</h4>
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <a href="images/certificates/Casnub 22HS Approval letter.png" class="gallery-item block overflow-hidden rounded">
+                               <img src="images/certificates/Casnub 22HS Approval letter.png" alt="Casnub 22HS Approval Page 1" class="w-full h-[120px] object-cover">
                             </a>
-                            <a href="images/certificates/Casnub 22HS Approval letter2.png" class="gallery-item">
-                               <img src="images/certificates/Casnub 22HS Approval letter2.png" alt="Casnub 22HS Bogie Approval Page 2" class="certificate-image">
+                            <a href="images/certificates/Casnub 22HS Approval letter2.png" class="gallery-item block overflow-hidden rounded">
+                               <img src="images/certificates/Casnub 22HS Approval letter2.png" alt="Casnub 22HS Approval Page 2" class="w-full h-[120px] object-cover">
                             </a>
                         </div>
-                        <p class="description font-bold flex items-center">Vendor approval for Cast Steel Casnub bogie and its components from RDSO.</p>
+                        <p class="description text-sm text-gray-600 text-center font-semibold">Vendor approval for Cast Steel Casnub bogie and its components from RDSO.</p>
                     </div>
-                    <div class="certificate-box">
-                        <h4 class="text-xl font-bold text-brand-orange mb-3 flex text-center">LCCF Bogie Approval</h4>
-                        <div class="certificate-img-group">
-                            <a href="images/certificates/LCCF Approval letter.png" class="gallery-item">
-                                <img src="images/certificates/LCCF Approval letter.png" alt="LCCF Bogie Approval Page 1" class="certificate-image">
+                    <!-- Certificate 5 -->
+                    <div class="certificate-box bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
+                        <h4 class="text-xl font-bold text-brand-orange mb-3 text-center">LCCF Bogie Approval</h4>
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <a href="images/certificates/LCCF Approval letter.png" class="gallery-item block overflow-hidden rounded">
+                                <img src="images/certificates/LCCF Approval letter.png" alt="LCCF Approval Page 1" class="w-full h-[120px] object-cover">
                             </a>
-                            <a href="images/certificates/LCCF Approval letter2.png" class="gallery-item">
-                                <img src="images/certificates/LCCF Approval letter2.png" alt="LCCF Bogie Approval Page 2" class="certificate-image">
+                            <a href="images/certificates/LCCF Approval letter2.png" class="gallery-item block overflow-hidden rounded">
+                                <img src="images/certificates/LCCF Approval letter2.png" alt="LCCF Approval Page 2" class="w-full h-[120px] object-cover">
                             </a>
                         </div>
-                        <p class="description font-bold flex items-center">Vendor approval for Cast Steel LCCF Bogies for CONCOR Flat Wagons from RDSO.</p>
+                        <p class="description text-sm text-gray-600 text-center font-semibold">Vendor approval for Cast Steel LCCF Bogies for CONCOR Flat Wagons from RDSO.</p>
                     </div>
-                    <div class="certificate-box">
-                        <h4 class="text-xl font-bold text-brand-orange mb-3 flex text-center">LWLH25 Bogie Approval</h4>
-                        <div class="certificate-img-group">
-                            <a href="images/certificates/LWLH25 Approval letter.png" class="gallery-item">
-                                <img src="images/certificates/LWLH25 Approval letter.png" alt="LWLH25 Bogie Approval Page 1" class="certificate-image">
+                    <!-- Certificate 6 -->
+                    <div class="certificate-box bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
+                        <h4 class="text-xl font-bold text-brand-orange mb-3 text-center">LWLH25 Bogie Approval</h4>
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <a href="images/certificates/LWLH25 Approval letter.png" class="gallery-item block overflow-hidden rounded">
+                                <img src="images/certificates/LWLH25 Approval letter.png" alt="LWLH25 Approval Page 1" class="w-full h-[120px] object-cover">
                             </a>
-                            <a href="images/certificates/LWLH25 Approval letter2.png" class="gallery-item">
-                                <img src="images/certificates/LWLH25 Approval letter2.png" alt="LWLH25 Bogie Approval Page 2" class="certificate-image">
+                            <a href="images/certificates/LWLH25 Approval letter2.png" class="gallery-item block overflow-hidden rounded">
+                                <img src="images/certificates/LWLH25 Approval letter2.png" alt="LWLH25 Approval Page 2" class="w-full h-[120px] object-cover">
                             </a>
                         </div>
-                        <p class="description font-bold flex items-center">Vendor approval for Light Weight Low Height 25T axle load bogie from RDSO.</p>
-                    </div>
-                    <div class="certificate-box">
-                        <h4 class="text-xl font-bold text-brand-orange mb-3 flex text-center">Brake Beam Approval</h4>
-                        <div class="certificate-img-group">
-                            <a href="images/certificates/Brake Beam Approval letter.png" class="gallery-item">
-                                <img src="images/certificates/Brake Beam Approval letter.png" alt="Brake Beam Approval Page 1" class="certificate-image">
-                            </a>
-                            <a href="images/certificates/Brake Beam Approval letter2.png" class="gallery-item">
-                                <img src="images/certificates/Brake Beam Approval letter2.png" alt="Brake Beam Approval Page 2" class="certificate-image">
-                            </a>
-                        </div>
-                        <p class="description font-bold flex items-center">Vendor approval for manufacturing Brake Beams for freight stock from RDSO.</p>
+                        <p class="description text-sm text-gray-600 text-center font-semibold">Vendor approval for Light Weight Low Height 25T axle load bogie from RDSO.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-		  <!-- Youtube video Section -->
-                <div class="container mx-auto px-4 mb-12">
-    				<div class="h-96 rounded-lg overflow-hidden shadow-lg">
-        				<iframe src="https://youtu.be/A1IT1dYZVsY?si=P1CFTx__idgOYH7l" width="100%" height="100%" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-    				</div>
-				</div>
-		
         <!-- Gallery Section -->
-        <section id="gallery" class="py-20">
+        <section id="gallery" class="py-20 bg-white">
             <div class="container mx-auto px-4">
                 <div class="section-title">
                     <h2>Gallery</h2>
                     <p>A Glimpse Into Our World of Manufacturing</p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <a href="images/gallery-1.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-1.jpg" alt="Gallery Image 1"></a>
-                    <a href="images/gallery-2.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-2.jpg" alt="Gallery Image 2"></a>
-                    <a href="images/gallery-3.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-3.jpg" alt="Gallery Image 3"></a>
-                    <a href="images/gallery-4.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-4.jpg" alt="Gallery Image 4"></a>
-                    <a href="images/gallery-5.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-5.jpg" alt="Gallery Image 5"></a>
-                    <a href="images/gallery-6.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-6.jpg" alt="Gallery Image 6"></a>
-                    <a href="images/gallery-7.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-7.jpg" alt="Gallery Image 7"></a>
-                    <a href="images/gallery-8.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-8.jpg" alt="Gallery Image 8"></a>
-                    <a href="images/gallery-9.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-9.jpg" alt="Gallery Image 9"></a>
-                    <a href="images/gallery-10.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-10.jpg" alt="Gallery Image 10"></a>
-                    <a href="images/gallery-11.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-11.jpg" alt="Gallery Image 11"></a>
-                    <a href="images/gallery-12.jpg" class="gallery-item"><img class="w-full h-auto rounded-lg shadow-md" src="images/gallery-12.jpg" alt="Gallery Image 12"></a>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <a href="images/gallery-1.jpg" class="gallery-item block overflow-hidden rounded-lg shadow-sm"><img class="w-full h-60 object-cover transition-all duration-300 hover:scale-105" src="images/gallery-1.jpg" alt="Gallery 1"></a>
+                    <a href="images/gallery-2.jpg" class="gallery-item block overflow-hidden rounded-lg shadow-sm"><img class="w-full h-60 object-cover transition-all duration-300 hover:scale-105" src="images/gallery-2.jpg" alt="Gallery 2"></a>
+                    <a href="images/gallery-3.jpg" class="gallery-item block overflow-hidden rounded-lg shadow-sm"><img class="w-full h-60 object-cover transition-all duration-300 hover:scale-105" src="images/gallery-3.jpg" alt="Gallery 3"></a>
+                    <a href="images/gallery-4.jpg" class="gallery-item block overflow-hidden rounded-lg shadow-sm"><img class="w-full h-60 object-cover transition-all duration-300 hover:scale-105" src="images/gallery-4.jpg" alt="Gallery 4"></a>
+                    <a href="images/gallery-5.jpg" class="gallery-item block overflow-hidden rounded-lg shadow-sm"><img class="w-full h-60 object-cover transition-all duration-300 hover:scale-105" src="images/gallery-5.jpg" alt="Gallery 5"></a>
+                    <a href="images/gallery-6.jpg" class="gallery-item block overflow-hidden rounded-lg shadow-sm"><img class="w-full h-60 object-cover transition-all duration-300 hover:scale-105" src="images/gallery-6.jpg" alt="Gallery 6"></a>
+                    <a href="images/gallery-7.jpg" class="gallery-item block overflow-hidden rounded-lg shadow-sm"><img class="w-full h-60 object-cover transition-all duration-300 hover:scale-105" src="images/gallery-7.jpg" alt="Gallery 7"></a>
+                    <a href="images/gallery-8.jpg" class="gallery-item block overflow-hidden rounded-lg shadow-sm"><img class="w-full h-60 object-cover transition-all duration-300 hover:scale-105" src="images/gallery-8.jpg" alt="Gallery 8"></a>
                 </div>
             </div>
         </section>
@@ -388,106 +394,101 @@
                     <p>Get in Touch with Our Expert Team</p>
                 </div>
                 
-                <div class="flex flex-wrap -mx-4 mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
                     <!-- Contact Information -->
-                    <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
-                        <div class="bg-white rounded-lg shadow-lg p-8 h-full flex flex-col justify-center">
-                            <h3 class="text-2xl font-bold mb-6 text-brand-blue">Contact Information</h3>
-                            <div class="flex items-center mb-6">
-                                <div class="bg-brand-orange text-white rounded-full h-12 w-12 flex items-center justify-center text-xl mr-4 flex-shrink-0">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg">Address:</h4>
-                                    <p class="text-gray-600">Block 2&3, Revenue Sy no 248/253/2, At Khambhala,<br>Ta-Padadhari, Rajkot - 360110, Gujarat, INDIA.</p>
-                                </div>
+                    <div class="bg-white rounded-lg shadow-md p-8 flex flex-col justify-center space-y-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Contact Information</h3>
+                        <div class="flex items-start">
+                            <div class="bg-brand-orange text-white rounded-full h-12 w-12 flex items-center justify-center text-xl mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
                             </div>
-                            <div class="flex items-center mb-6">
-                                <div class="bg-brand-orange text-white rounded-full h-12 w-12 flex items-center justify-center text-xl mr-4 flex-shrink-0">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg">Email:</h4>
-                                    <p class="text-gray-600">Bhavesh@sudarshanplaneta.com</p>
-                                </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">Address:</h4>
+                                <p class="text-gray-600 mt-1">Block 2&3, Revenue Sy no 248/253/2, At Khambhala,<br>Ta-Padadhari, Rajkot - 360110, Gujarat, INDIA.</p>
                             </div>
-                            <div class="flex items-center">
-                                <div class="bg-brand-orange text-white rounded-full h-12 w-12 flex items-center justify-center text-xl mr-4 flex-shrink-0">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg">Call:</h4>
-                                    <p class="text-gray-600">+91 77 990 222 74</p>
-                                </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-brand-orange text-white rounded-full h-12 w-12 flex items-center justify-center text-xl mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">Email:</h4>
+                                <p class="text-gray-600 mt-1">Bhavesh@sudarshanplaneta.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-brand-orange text-white rounded-full h-12 w-12 flex items-center justify-center text-xl mr-4 flex-shrink-0">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">Call:</h4>
+                                <p class="text-gray-600 mt-1">+91 77 990 222 74</p>
                             </div>
                         </div>
                     </div>
+
                     <!-- Form -->
-                    <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
-                        <div class="bg-white rounded-lg shadow-lg p-8 h-full flex flex-col justify-center">
-                             <h3 class="text-2xl font-bold mb-6 text-brand-blue">Send Us a Message</h3>
-						<form>
-                        <div class="mb-2">
-                            <label for="name" class="block text-gray-700 mb-2">Name</label>
-                            <input type="text" id="name" class="w-full bg-gray-100 border border-gray-100 rounded-lg py-2 px-2 focus:outline-none focus:ring-2 focus:ring-sudarshan-orange transition-colors">
-                        </div>
-                        <div class="mb-2">
-                            <label for="email" class="block text-gray-700 mb-2">Email</label>
-                            <input type="email" id="email" class="w-full bg-gray-100 border border-gray-100 rounded-lg py-2 px-2 focus:outline-none focus:ring-2 focus:ring-sudarshan-orange transition-colors">
-                        </div>
-                        <div class="mb-2">
-                            <label for="message" class="block text-gray-700 mb-2">Message</label>
-                            <textarea id="message" rows="2" class="w-full bg-gray-100 border border-gray-100 rounded-lg py-2 px-2 focus:outline-none focus:ring-2 focus:ring-sudarshan-orange transition-colors"></textarea>
-                        </div>
-                        <button type="submit" class="btn-get-started">Send Message</button>
-						</form>
-                        </div>
+                    <div class="bg-white rounded-lg shadow-md p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-1">Name</label>
+                                <input type="text" id="name" class="w-full bg-gray-50 border border-gray-200 rounded-lg py-2.5 px-4 focus:outline-none focus:ring-2 focus:ring-brand-orange transition-colors">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-1">Email</label>
+                                <input type="email" id="email" class="w-full bg-gray-50 border border-gray-200 rounded-lg py-2.5 px-4 focus:outline-none focus:ring-2 focus:ring-brand-orange transition-colors">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-1">Message</label>
+                                <textarea id="message" rows="4" class="w-full bg-gray-50 border border-gray-200 rounded-lg py-2.5 px-4 focus:outline-none focus:ring-2 focus:ring-brand-orange transition-colors"></textarea>
+                            </div>
+                            <button type="submit" class="w-full sm:w-auto btn-get-started px-8 py-3 text-center">Send Message</button>
+                        </form>
                     </div>
                 </div>
 
-                <!-- Map Section -->
-                <div>
-                    <div class="h-96 rounded-lg overflow-hidden shadow-lg">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.8866632770423!2d70.6799502!3d22.320125699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cfabc5b07859%3A0x8dde64c1c483cf0f!2sSudarshan%20Planeta%20Corporation%20LLP!5e0!3m2!1sen!2sin!4v1754399434090!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
+                <!-- Verified Interactive Map Embed -->
+                <div class="rounded-lg overflow-hidden shadow-xl border border-gray-200 h-96">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.8866632770423!2d70.6799502!3d22.320125699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cfabc5b07859%3A0x8dde64c1c483cf0f!2sSudarshan%20Planeta%20Corporation%20LLP!5e0!3m2!1sen!2sin!4v1717056000000!5m2!1sen!2sin" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-brand-blue-dark text-white py-10">
+    <footer class="bg-neutral-900 text-white py-12">
         <div class="container mx-auto px-4">
-            <div class="flex flex-wrap justify-between">
-                <div class="w-full lg:w-1/3 mb-8 lg:mb-0">
-                    <h3 class="text-2xl font-bold mb-4">Sudarshan Planeta Corporation LLP</h3>
-                    <p class="text-gray-400"><strong>Address:</strong>Block 2&3, Revenue Sy no 248/253/2, At Khambhala,<br>Ta-Padadhari, Rajkot - 360110, Gujarat, INDIA.<br><br>
-                    <strong>Phone:</strong> +91 77 990 222 74<br>
-                    <strong>Email:</strong> Bhavesh@sudarshanplaneta.com<br>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-8 border-b border-neutral-800">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Sudarshan Planeta Corporation LLP</h3>
+                    <p class="text-neutral-400 text-sm leading-relaxed">
+                        <strong>Address:</strong> Block 2&3, Revenue Sy no 248/253/2, At Khambhala, Ta-Padadhari, Rajkot - 360110, Gujarat, INDIA.<br><br>
+                        <strong>Phone:</strong> +91 77 990 222 74<br>
+                        <strong>Email:</strong> Bhavesh@sudarshanplaneta.com
                     </p>
                 </div>
-                <div class="w-full lg:w-1/4 mb-8 lg:mb-0">
-                    <h4 class="font-bold mb-4">Useful Links</h4>
-                    <ul>
-                        <li class="mb-2"><a href="#hero" class="hover:text-brand-orange"><i class="fas fa-chevron-right text-brand-orange mr-2"></i>Home</a></li>
-                        <li class="mb-2"><a href="#about" class="hover:text-brand-orange"><i class="fas fa-chevron-right text-brand-orange mr-2"></i>About us</a></li>
-                        <li class="mb-2"><a href="#products" class="hover:text-brand-orange"><i class="fas fa-chevron-right text-brand-orange mr-2"></i>Products</a></li>
-                        <li class="mb-2"><a href="#process" class="hover:text-brand-orange"><i class="fas fa-chevron-right text-brand-orange mr-2"></i>Process</a></li>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-neutral-400">
+                        <li><a href="#hero" class="hover:text-brand-orange transition-colors"><i class="fas fa-chevron-right text-brand-orange mr-2 text-xs"></i>Home</a></li>
+                        <li><a href="#about" class="hover:text-brand-orange transition-colors"><i class="fas fa-chevron-right text-brand-orange mr-2 text-xs"></i>About us</a></li>
+                        <li><a href="#products" class="hover:text-brand-orange transition-colors"><i class="fas fa-chevron-right text-brand-orange mr-2 text-xs"></i>Products</a></li>
+                        <li><a href="#process" class="hover:text-brand-orange transition-colors"><i class="fas fa-chevron-right text-brand-orange mr-2 text-xs"></i>Process</a></li>
                     </ul>
                 </div>
-                <div class="w-full lg:w-1/3">
-                    <h4 class="font-bold mb-4">Join Our Newsletter</h4>
-                    <p class="mb-4 text-gray-400">Stay updated with our latest news and product developments.</p>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Join Our Newsletter</h4>
+                    <p class="mb-4 text-neutral-400 text-sm">Stay updated with our latest updates and technical developments.</p>
                     <form class="flex">
-                        <input type="email" class="w-full p-2 rounded-l-md text-gray-800" placeholder="Enter your email">
-                        <button type="submit" class="bg-brand-orange text-white px-6 rounded-r-md hover:bg-brand-orange-dark">Subscribe</button>
+                        <input type="email" class="w-full p-2.5 rounded-l text-neutral-800 focus:outline-none" placeholder="Enter your email" required>
+                        <button type="submit" class="bg-brand-orange text-white px-5 rounded-r font-medium hover:bg-brand-orange-dark transition-colors">Subscribe</button>
                     </form>
                 </div>
             </div>
-            <div class="text-center text-gray-500 pt-8 mt-8 border-t border-gray-700">
-                <p>Copyright © 2025 Sudarshan Planeta Corporation LLP - All Rights Reserved.</p>
-                <p><a href="http://www.sudarshanplaneta.com" class="hover:text-brand-orange">www.sudarshanplaneta.com</a></p>
+            <div class="text-center text-neutral-500 text-xs pt-8 space-y-1">
+                <p>Copyright © 2026 Sudarshan Planeta Corporation LLP - All Rights Reserved.</p>
+                <p><a href="http://www.sudarshanplaneta.com" class="hover:text-brand-orange transition-colors">www.sudarshanplaneta.com</a></p>
             </div>
         </div>
     </footer>
@@ -495,32 +496,41 @@
     <!-- Lightbox Structure -->
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+        <img class="lightbox-content" id="lightbox-img" alt="Lightbox Preview">
         <a class="lightbox-prev">&#10094;</a>
         <a class="lightbox-next">&#10095;</a>
     </div>
 
+    <!-- Script Components Dependencies -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Mobile menu toggle
+            // Mobile Menu Controller
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
+            
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
 
-            // Header scroll effect
+            // Close mobile menu when clicking layout links
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Navigation dynamic header resizing element 
             const header = document.getElementById('header');
             window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
+                if (window.scrollY > 30) {
                     header.classList.add('header-scrolled');
                 } else {
                     header.classList.remove('header-scrolled');
                 }
             });
 
-            // Lightbox Gallery
+            // Responsive Lightbox Component System
             const galleryItems = document.querySelectorAll('.gallery-item');
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
@@ -554,7 +564,6 @@
             galleryItems.forEach((item, index) => {
                 item.addEventListener('click', (e) => {
                     e.preventDefault();
-                    // Find the correct index from the global `images` array
                     const clickedImageSrc = e.currentTarget.href;
                     const clickedIndex = images.findIndex(src => src === clickedImageSrc);
                     showLightbox(clickedIndex);
@@ -563,27 +572,21 @@
 
             closeBtn.addEventListener('click', hideLightbox);
             lightbox.addEventListener('click', (e) => {
-                if (e.target === lightbox) {
-                    hideLightbox();
-                }
+                if (e.target === lightbox) hideLightbox();
             });
             nextBtn.addEventListener('click', showNextImage);
             prevBtn.addEventListener('click', showPrevImage);
 
-            // Keyboard navigation for lightbox
+            // Access keys actions support
             document.addEventListener('keydown', (e) => {
                 if (lightbox.style.display === 'flex') {
-                    if (e.key === 'ArrowRight') {
-                        showNextImage();
-                    } else if (e.key === 'ArrowLeft') {
-                        showPrevImage();
-                    } else if (e.key === 'Escape') {
-                        hideLightbox();
-                    }
+                    if (e.key === 'ArrowRight') showNextImage();
+                    else if (e.key === 'ArrowLeft') showPrevImage();
+                    else if (e.key === 'Escape') hideLightbox();
                 }
             });
 
-            // Swiper Hero Slider
+            // Init Dynamic Hero Carousel configuration
             var swiper = new Swiper('.hero-slider', {
                 loop: true,
                 pagination: {
@@ -603,11 +606,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
